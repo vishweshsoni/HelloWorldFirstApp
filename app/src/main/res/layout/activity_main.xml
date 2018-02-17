@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.vishwesh.helloworld.MainActivity">
+
+
+    <VideoView
+        android:id="@+id/v_guideline1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+
+    <ImageView
+        android:id="@+id/logoId"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/logo" />
+    <LinearLayout
+        android:layout_below="@+id/nameUdacity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/logoLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nameUdacity"
+            android:onClick="onMap"
+            android:src="@drawable/location" />
+
+        <TextView
+            android:id="@+id/textLocation"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/firstLine"
+            android:textColor="#0babfe"
+            android:clickable="true"
+            android:textColorLink="#0babfe"
+            android:onClick="onAddress"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/nameUdacity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="132dp"
+        android:padding="12dp"
+        android:shadowColor="#0babfe"
+        android:shadowDx="4"
+        android:shadowDy="-4"
+        android:text="@string/Udacity"
+        android:textColor="#0babfe"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameUdacity"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:id="@+id/logoPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/phone"
+            android:onClick="onDial"/>
+
+        <TextView
+            android:id="@+id/callNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:text="@string/number"
+            android:textColor="#0babfe"
+            android:autoLink="phone"
+            android:textColorLink="#0babfe"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameUdacity"
+        android:layout_marginTop="100dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/earth"
+            android:onClick="onweb"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#0babfe"
+            android:text="@string/web"
+            android:autoLink="web"
+            android:textColorLink="#0babfe"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
